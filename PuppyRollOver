@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>
+
+</title>
+<script language="javascript">
+	function MouseRollover(MyImage) {
+	MyImage.src = "rollpuppy.png";
+	}
+	function MouseOut(MyImage) {
+		MyImage.src = "puppy.png";
+	}
+</script>
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div>
+<h1>Get Ready Pups To Make Something Happen!</h1>
+</div>
+	<p>
+	Welcome Internet Traveller. Today I have for you a familiar web interaction, the common roll over, with a puppy.</p>	
+	<p>Roll over, roll over!</p>
+	<img src="puppy.png" onMouseOver="MouseRollover(this)" 
+onMouseOut="MouseOut(this)"/>
+
+<body>
+</html>
