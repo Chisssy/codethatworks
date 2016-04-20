@@ -1,0 +1,90 @@
+// TODAY'S DATE
+
+/*Today is a variable that gets a new date object from the computer
+//document.write(hourNow);
+//print the current time on screen
+*/
+//Write a greeting based on the time of day
+var today = new Date();
+var hourNow = today.getHours();
+var greeting;
+if (hourNow > 17) {
+	greeting = 'Good evening!';
+	} else if (hourNow > 12) {
+	greeting = 'Good afternoon!';
+	} else if (hourNow > 0){
+	greeting = 'Good morning!';
+	} else {
+	greeting = 'Welcome!';
+	}
+
+	document.write('<h3>' + greeting + '</h3>');
+
+// Get the day of the week 
+var weekday = new Array(7);
+weekday[0]=  "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+
+var n = weekday[today.getDay()];	
+	
+var nows = today.getDate();
+var tellMe;
+tellMe = 'nows';
+
+// Get the month 
+var month = new Array();
+month[0] = "January";
+month[1] = "February";
+month[2] = "March";
+month[3] = "April";
+month[4] = "May";
+month[5] = "June";
+month[6] = "July";
+month[7] = "August";
+month[8] = "September";
+month[9] = "October";
+month[10] = "November";
+month[11] = "December";
+var theMonth = month[today.getMonth()];
+
+//Get the year
+var yeary = new Date();
+var years = yeary.getFullYear();
+var theYear;
+theYear = 'years';
+
+//Write out the day of the week, month date and year from the variables taken above
+document.write('<h1>Today Is ' +  n + ", " + theMonth + " " + nows + ", " + years + '</h1>');
+
+//Use switch to pick which chores for today
+var day;
+switch (new Date().getDay()) {
+    case 0:
+		day = "Sunday <br><ul><li>news paper</li><li>clip coupons</li>	<li>grocery shopping?</li><li>load up car with daycare stuff</li><li>make tomorrow lunch</li><li>plan snacks</li><li>update meal board</li><ul><li>clean: </li><li>tub</li><li>sink </li><li>toilet</li><li>mirror</li><li>floor</li></ul><li>weekly reflection</li><li>notes, record, what was done</li><ul>";
+			break;
+    case 1:
+        day = "Monday<br>one hour clean up:<ul><li>toss old magazines</li><li>vacuum all rooms</li><li>mop kitchen/bath</li><li>clean mirrors</li><li>clean doors</li><li>dust</li><li>clean counter tops</li></ul> ";		break;
+	case 2:
+        day = "Tuesday<ul><li> clean out fridge</li><li> wash shelves </li><li>take out trash</li><li> take out recycling</li><li> wash trash can</li><li> inventory fridge/pantry</li><li> water & fertilize plants</li><li> 15 min in zone</li><li> drink water</li>";
+        break;
+    case 3:
+        day = "Wednesday <ul><li>bring in trash can</li> <li> zone cleaning chores</li> <li>finish weekly cleaning</li> <li> write thank you notes </li> <li> balance check book </li> <li>pay bills insurance pay 16th</li>";
+        break;
+    case 4:
+        day = "Thursday <ul><li>Publix cirular</li><li>work on menu </li><li>file papers</li><li>write letters and cards</li><li>work on grocery list</li><li>inventory fridge</li></ul>";
+        break;
+    case 5:
+        day = "Friday <ul><li>mend clothes</li><li> polish shoes <li>clean out car </li><li> shopping list!</li><li> clean out purse </li>get laundry together</li><li> look up if library books are due</li> ";
+        break;
+    case  6:
+        day = "Saturday <ul><li> Chores </li><li>laundry</li><ul><li> wash</li><li> dry</li><li> fold </li> </ul><li>menus planned?</li><li> grocery list done?</li><li> get coupons</li><li>grocery shopping</li><li> library</li><li> post office<li> buy gifts & cards </li><li>get quarters</li><li> scrub kitchen floor</li><li> sweep porch</li><li> exercise</li>";
+        break;
+	 case  7:
+        day = "Sunday <ul> <li>news paper</li> <li>clip coupons</li> <li>grocery shopping?</li><li>load up car with daycare stuff</li> <li>make tomorrow lunch</li><li>plan snacks</li><li>update meal board</li><li>clean: </li><ul><li>tub</li><li>sink<li>toliet</li><li>mirror</li><li>floor</li><li>weekly reflection: notes, record, what was done</li>";
+        break;
+}
